@@ -1,38 +1,82 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::placeholder {
+  color: rgba(190, 103, 32, 0.938);
+}
+
+.my-todos {
+  background-color: #10be53;
+  padding: 30px 40px;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my-todos .title {
+  text-transform: capitalize;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.my-todos .input-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.my-todos input {
+  flex-basis: 50%;
+  padding: 1rem;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-todos .addBtn {
+  flex-basis: 10%;
+  background-color: rgb(238, 238, 238);
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.my-todos .addBtn:active {
+  background-color: rgb(201, 201, 201);
+}
+
+.todo-list {
+  list-style-type: none;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  border: rgba(153, 150, 148, 0.938) solid 1px;
+  background-color: rgb(223, 223, 223);
+}
+
+.todo-list li span {
+  flex: 1;
+  padding: 1rem;
+  color: #435050;
+  cursor: pointer;
+}
+
+.todo-list li i {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.todo-list li .completed {
+  color: green;
+  font-weight: bold;
+}
+
+.completed::after {
+  content: ' - completed';
 }
